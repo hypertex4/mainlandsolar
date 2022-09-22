@@ -1,0 +1,160 @@
+/* * {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+} */
+
+.calendar-container {
+    width              : 100%;
+    /* max-width       : 700px; */
+    max-width          : 500px;
+    margin             : 0 auto;
+    /* height          : 100vh; */
+    background-color   : #FFFFFF;
+    color              : #262D33;
+    overflow-x         : auto;
+    /* display         : flex;
+    justify-content    : center;
+    align-items        : center; */
+}
+
+.calendar {
+    /* width              : 45rem; */
+    /* height          : 52rem; */
+    background-color: #FFFFFF;
+    margin          : 0 auto;
+    /*  */
+    border          : 1px solid #C4C4C4;
+}
+
+.month {
+    width              : 100%;
+    /* height          : 12rem; */
+    background-color   : #209E02;
+    color              : #FFFFFF;
+    display            : flex;
+    justify-content    : space-between;
+    align-items        : center;
+    /* padding         : 0 2rem; */
+    text-align         : center;
+    /*  */
+
+    padding      : 1em 2em;
+    margin-bottom: 1em;
+}
+
+.month i {
+    /* font-size: 2.5rem; */
+    cursor: pointer;
+}
+
+.month h1 {
+    /* font-size     : 3rem; */
+    font-weight   : 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom : 1rem;
+}
+
+.month p {
+    font-size: .9rem;
+}
+
+.weekdays {
+    width         : 100%;
+    /* height     : 5rem; */
+    /* padding    : 0 0.4rem; */
+    display       : flex;
+    align-items   : center;
+}
+
+.weekdays div {
+    /* font-size      : 1.5rem; */
+    font-weight       : 400;
+    letter-spacing    : 0.1rem;
+    /* width          : calc(44.2rem / 7); */
+    width             : calc(100% / 7);
+    display           : flex;
+    justify-content   : center;
+    align-items       : center;
+    text-shadow       : 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+    width       : 100%;
+    display     : flex;
+    flex-wrap   : wrap;
+    /* padding  : 0.2rem; */
+}
+
+.days a {
+    text-decoration: none;
+    color          : #262D33;
+
+}
+
+.days div {
+    /* font-size      : 1.4rem; */
+    /* margin         : 0.3rem; */
+    /* width          : calc(40.2rem / 7); */
+    width          : calc(100% / 7);
+    height         : 3em;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    text-shadow    : 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition     : background-color 0.2s;
+    /* border: 1px solid #ffffff; */
+    border-style: groove;
+    border-color: #FFFFFF;
+}
+
+.days div.partly-booked {
+    background: #ee8b23;
+}
+
+.days div.fully-booked {
+    background: #ea4b4b;
+}
+
+.days div.partly-booked a,
+.days div.fully-booked a {
+    color: #FFFFFF !important;
+}
+
+.days div.available {
+    background: #ffffff;
+    border    : 1px solid #c4c4c4;
+}
+
+.days div.day-off {
+    background: #d0d0d0;
+}
+
+.days div:hover:not(.today) {
+    background-color: #8f8585;
+    color           : #FFFFFF;
+    border          : 1px solid #777;
+    cursor          : pointer;
+}
+
+.days div:hover:not(.today) a {
+    text-decoration: none;
+    color          : #ffffff;
+
+}
+
+.prev-date,
+.next-date {
+    opacity: 0.5;
+}
+
+.today {
+    background-color: #209E02;
+    color           : #FFFFFF;
+}

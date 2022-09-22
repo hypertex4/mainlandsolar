@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{index.php} !-f
+
+RewriteRule ^details/([a-zA-Z0-9-]*)$ details.php?pro_slug=$1 [NC,L]
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

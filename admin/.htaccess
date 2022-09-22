@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{index.php} !-f
+
+RewriteRule ^edit-product/([a-zA-Z0-9-]*)$ edit-product.php?productId=$1 [NC,L]
+RewriteRule ^edit-post/([a-zA-Z0-9-]*)$ edit-post.php?postId=$1 [NC,L]
+#RewriteRule ^history-details/([a-zA-Z0-9-]*)$ history-details.php?historyId=$1 [NC,L]
+RewriteRule ^add-maintenance-history/([a-zA-Z0-9-]*)$ add-maintenance-history.php?historyId=$1 [NC,L]
+RewriteRule ^logout/([a-zA-Z0-9-]*)$ logout.php?admin_id=$1 [NC,L]
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

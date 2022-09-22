@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{index.php} !-f
+
+RewriteRule ^purchase-details/([a-zA-Z0-9-]*)$ purchase-details.php?purchase_id=$1 [NC,L]
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
